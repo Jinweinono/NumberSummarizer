@@ -16,23 +16,27 @@ public class Numbersummazier implements NumberRangeSummarizer {
 
 	public static void main(String[] args) {
 		
-		Numbersummazier caseOne = new Numbersummazier();
-		System.out.println("Enter a list of numbers in ascending order.");
-		System.out.println("Please separate the numbers by a comma.");
-		//Taking in user's input by a scanner object.
-		Scanner numScan = new Scanner(System.in);
-		String userinput = numScan.nextLine();
-		numScan.close();
-		
-		ArrayList<Integer> Temp = new ArrayList<Integer>();
-		Temp = caseOne.collect(userinput); // collect the input
-		System.out.println("Before number summarization");
-		System.out.println(Temp);
-		
-		//summarisation
-		System.out.println("After number summarization:");
-		String finalAnswer = caseOne.summerizedCollection(Temp);
-		System.out.println(finalAnswer);
+		try{
+			Numbersummazier caseOne = new Numbersummazier();
+			System.out.println("Enter a list of numbers in ascending order.");
+			System.out.println("Please separate the numbers by a comma.");
+			//Taking in user's input by a scanner object.
+			Scanner numScan = new Scanner(System.in);
+			String userinput = numScan.nextLine();
+			numScan.close();
+
+			ArrayList<Integer> Temp = new ArrayList<Integer>();
+			Temp = caseOne.collect(userinput); // collect the input
+			System.out.println("Before number summarization");
+			System.out.println(Temp);
+
+			//summarisation
+			System.out.println("After number summarization:");
+			String finalAnswer = caseOne.summerizedCollection(Temp);
+			System.out.println(finalAnswer);
+		}catch (Exception e){
+			System.out.println("Only integer inputs allowed!");
+		}
 	}
 
 	@Override
