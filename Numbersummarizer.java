@@ -38,7 +38,7 @@ public class Numbersummazier implements NumberRangeSummarizer {
 	@Override
 	public ArrayList<Integer> collect(String input) {
 		// TODO Auto-generated method stub
-		ArrayList<Integer> numbers = new ArrayList<>();
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		String str[] = input.split(",");
 		List<String> str_temp = new ArrayList<String>();
 		str_temp = Arrays.asList(str);
